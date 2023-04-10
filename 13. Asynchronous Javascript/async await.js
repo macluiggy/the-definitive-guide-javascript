@@ -26,7 +26,7 @@ function getUserData(userId) {
 //     console.error(`Error: ${error.message}`);
 //   });
 
-const [{ result, value: user1 }, { result: result2, value: user2 }] =
+const [{ status: status1, value: user1 }, { status: status2, value: user2 }] =
   await Promise.allSettled([getUserData(1), getUserData(2)]);
 console.log(`User 1 name: ${user1.name}`);
 console.log(`User 2 name: ${user2.name}`);
